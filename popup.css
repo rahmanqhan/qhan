@@ -1,0 +1,42 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Popup container with black background and rounded corners */
+.popup-container {
+  width: 280px;   /* Fixed width */
+  height: 180px;  /* Fixed height */
+  background-color: #000000;  /* Black background */
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  padding-top: 10px;
+  border-radius: 20px;  /* Rounded corners */
+  overflow: hidden;  /* Make sure content doesn't spill out */
+}
+
+/* Ensure html and body fill the entire screen */
+html, body {
+  background-color: #000000;  /* Black background */
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+/* White text for visibility */
+h1, p {
+  color: #ffffff;  /* White text for contrast */
+  font-size:15px;
+}
+
+/* Logo styling */
+.logo {
+  width: 30px;
+  height: auto;
+}
+
+

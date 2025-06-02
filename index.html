@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>qhan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="logo">
+<!--    <img src="" alt="qhan logo" class="logo-img" />-->
+    <h1>QHAN</h1>
+</div>
+
+<div class="time-greeting">
+    <div id="greeting">Hello</div>
+    <div class="status-bar">
+        <div id="weather">Fetching weather...</div>
+        <div class="divider"></div>
+        <div id="date">--</div>
+    </div>
+</div>
+
+<div class="search-container-top">
+    <div class="search-box">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="search-bar" placeholder="let's explore.." />
+    </div>
+</div>
+
+<section class="dashboard-widgets">
+    <div class="widget">
+        <h3>Today's Schedule</h3>
+        <ul>
+            <li><span class="dot blue"></span> 9:00 – Team meeting</li>
+            <li><span class="dot purple"></span> 11:00 – Work on project</li>
+            <li><span class="dot orange"></span> 2:30 – Client call</li>
+        </ul>
+    </div>
+
+    <div class="widget">
+        <h3>Tasks</h3>
+        <div class="task-list">
+        <label><input type="checkbox"> Submit report</label>
+        <label><input type="checkbox"> Prepare presentation</label>
+        <label><input type="checkbox"> Review documents</label>
+        </div>
+    </div>
+
+    <div class="widget">
+        <h3>Emails</h3>
+        <ul>
+            <li>📄 Meeting agenda</li>
+            <li>📧 Project update <span class="meta">– rahman</span></li>
+            <li>📩 Lunch invitation <span class="meta">– khan</span></li>
+        </ul>
+    </div>
+
+    <div class="widget focus-timer">
+        <h3>Focus Timer</h3>
+        <div id="timer-display">00:00</div>
+        <button onclick="startTimer()">Start</button>
+        <button onclick="resetTimer()">Reset</button>
+    </div>
+
+    <div class="widget">
+        <h3>Notes</h3>
+        <textarea placeholder="Project ideas and brainstorming notes..."></textarea>
+    </div>
+
+    <div class="widget">
+        <h3>Files</h3>
+        <ul>
+            <li>📁 Presentation.pptx</li>
+            <li>📄 Report draft.docx</li>
+            <li>🧾 Invoice.pdf</li>
+        </ul>
+    </div>
+</section>
+
+
+<script src="scripts/main.js"></script>
+</body>
+</html>
+
+
