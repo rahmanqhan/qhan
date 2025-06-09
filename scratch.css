@@ -1,0 +1,79 @@
+:root {
+    --animation-speed: 2000ms;  /* default speed that will be overridden by JS */
+    --loader-color-1: #ff0000;
+    --loader-color-2: #00ff00;
+    --loader-color-3: #0000ff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.Loader {
+    width: 100px;
+    height: 100px;
+    perspective: 800px;
+    border-radius: 50%;
+    cursor: pointer; /* Add this line */
+    animation: spin var(--animation-speed) linear infinite;
+    transition: animation-duration 0.2s;
+}
+
+.Loader:hover {
+    animation-duration: 50ms; /* Much faster spin */
+}
+
+.Loader .inner {
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.Loader .inner.one {
+    border-bottom: 3px solid var(--loader-color-1);
+    animation: anim1 var(--animation-speed) linear infinite;
+}
+
+.Loader .inner.two {
+    border-right: 3px solid var(--loader-color-2);
+    animation: anim2 var(--animation-speed) linear infinite;
+}
+
+.Loader .inner.three {
+    border-top: 3px solid var(--loader-color-3);
+    animation: anim3 var(--animation-speed) linear infinite;
+}
+
+@keyframes anim1 {
+    0% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+}
+
+@keyframes anim2 {
+    0% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+}
+
+@keyframes anim3 {
+    0% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+}
