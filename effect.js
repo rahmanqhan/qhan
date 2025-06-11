@@ -73,6 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.style.setProperty('--loader-color-2', color2);
     document.documentElement.style.setProperty('--loader-color-3', color3);
   };
+  setLoaderColors(); // <-- Add this to initialize colors once
+  setInterval(setLoaderColors, config.colorChangeSpeed); // <-- Keep changing colors
 
   setTimeout(() => {
     document.body.classList.add('loaded');
